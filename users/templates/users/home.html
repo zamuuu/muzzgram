@@ -1,7 +1,56 @@
 {% extends "users/base.html" %}
-
+{% load static %}
 {% block title %}<title>Muzzagram</title>{% endblock title %}
 
 {% block content %}
-    <h1>practicing IDK log in register if not</h1>
+    <main id="main-home-login">
+        <article id="home-container">
+            <div class="home-image-container">
+                <img src="{% static 'img/home-phones.png' %}" alt="home phones">
+            </div>
+            <div class="form-container">
+                <div class="primary-form">
+                    <i data-visualcompletion="css-img" aria-label="Instagram" class="" role="img" style="background-image: url(&quot;https://static.cdninstagram.com/rsrc.php/v4/yB/r/E7m8ZCMOFDS.png&quot;); background-position: 0px 0px; background-size: auto; width: 175px; height: 51px; background-repeat: no-repeat; display: inline-block;"></i>
+                    {% csrf_token %}
+                    <form action="" style="width: 100%; padding-top: 25px;">
+                        <div class="just-form">
+                            <div class="form-fields">
+                                <div class="fieldss first-field">
+                                    <div class="inner first-field-div">
+                                        <input type="text" placeholder="Enter your username" class="input-fields">
+                                    </div>
+                                </div>
+                                <div class="fieldss second-field">
+                                    <div class="inner second-field-div">
+                                        <input type="password" placeholder="Password" class="input-fields">
+                                    </div>
+                                </div>
+                                <div class="fieldss login-button-field">
+                                    <div class="login-field-div">
+                                        <button type="submit" class="button-login">Log in</button>
+                                    </div>
+                                </div>
+                                <div class="fieldss divisor-field">
+                                    <div class="inner-divisor">
+                                        <div class="inner-division-1"></div>
+                                        <div class="inner-division-or">or</div>
+                                        <div class="inner-division-3"></div>
+                                    </div>
+                                </div>
+                                <div class="">
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="secondary-box">
+                    <span style="width: 241px; height: 41px; font-size: 14px; line-height: 18px; ">
+                        <p style="margin: 15px;">Don't have an account? <a href="#">Sign up</a></p>
+                    </span>
+                </div>
+                
+            </div>
+        </article>
+    </main>
 {% endblock content %}
