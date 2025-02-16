@@ -210,3 +210,19 @@
     flex-grow: 1;
 }
 
+
+/* register styles */
+
+.register-form-fields {
+    margin-top: 0px;
+}
+
+i {
+    margin-bottom: 1rem;
+}
+
+span {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
