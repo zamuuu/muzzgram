@@ -5,8 +5,8 @@ from django.contrib.auth.models import AbstractUser
 
 
 class customUser(AbstractUser):
-    email = models.EmailField(unique=True)
-    bio = models.TextField(blank=True, null=True)
+    email = models.EmailField(unique=True, max_length=160)
+    bio = models.TextField(blank=True, null=True, max_length=350)
     profile_pic = models.ImageField(
         upload_to='static/profile_pics/', 
         blank=True, 

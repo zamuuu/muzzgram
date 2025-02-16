@@ -61,7 +61,7 @@ ROOT_URLCONF = 'muzzgram.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,4 +130,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Model of users (created by me)
-AUTH_USER_MODEL = "users.CustomUser"
+AUTH_USER_MODEL = "users.customUser"
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'feed'
