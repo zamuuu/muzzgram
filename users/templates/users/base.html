@@ -7,31 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
         {% block title %}<title>-</title>{% endblock title %}
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const usernameInput = document.querySelector('input[name="username"]');
-                const passwordInput = document.querySelector('input[name="password"]');
-                const loginButton = document.querySelector('.button-login');
-        
-                // Función para habilitar o deshabilitar el botón
-                function toggleButtonState() {
-                    if (usernameInput.value.trim() !== '' && passwordInput.value.trim() !== '') {
-                        loginButton.disabled = false; // Habilitar el botón
-                        loginButton.classList.add('enabled'); // Cambiar el estilo del botón
-                    } else {
-                        loginButton.disabled = true; // Deshabilitar el botón
-                        loginButton.classList.remove('enabled'); // Restaurar estilo apagado
-                    }
-                }
-        
-                // Escuchar los cambios en los campos de entrada
-                usernameInput.addEventListener('input', toggleButtonState);
-                passwordInput.addEventListener('input', toggleButtonState);
-        
-                // Llamar la función al cargar la página por si los campos ya están llenos
-                toggleButtonState();
-            });
-        </script>
     </head>
     <body>
         {% block content %}{% endblock content %}
